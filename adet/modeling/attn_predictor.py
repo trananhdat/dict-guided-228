@@ -292,7 +292,7 @@ class ATTPredictor(nn.Module):
             prob = 1.0
             decoder_input = torch.zeros(n).long().to(rois.device)
             decoder_hidden = self.attention.initHidden(n).to(rois.device)
-            decoder_raw = torch.zeros((n, self.attention.max_len, 106)).to(rois.device)
+            decoder_raw = torch.zeros((n, self.attention.max_len, 229)).to(rois.device)
             for di in range(self.attention.max_len):
                 decoder_output, decoder_hidden, decoder_attention = self.attention(decoder_input, decoder_hidden, rois)
                 probs = torch.exp(decoder_output)
