@@ -1,6 +1,6 @@
 _BASE_: "Base-TotalText.yaml"
 MODEL:
-  WEIGHTS: "weights/batext/pretrain_attn_R_50.pth"
+  WEIGHTS:
   RESNETS:
     DEPTH: 50
   BATEXT:

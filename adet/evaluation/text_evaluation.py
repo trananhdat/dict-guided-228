@@ -474,11 +474,11 @@ def ctc_decode(rec):
     s = ""
     for c in rec:
         c = int(c)
-        if c < 227:
+        if c < len(CTLABELS):
             if last_char != c:
                 s += CTLABELS[c]
                 last_char = c
-        elif c == 227:
+        elif c == len(CTLABELS):
             s += "口"
         else:
             last_char = False
@@ -489,9 +489,9 @@ def decode(rec):
     s = ""
     for c in rec:
         c = int(c)
-        if c < 227:
+        if c < len(CTLABELS):
             s += CTLABELS[c]
-        elif c == 227:
+        elif c == len(CTLABELS):
             s += "口"
 
     return s
