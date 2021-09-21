@@ -336,7 +336,7 @@ class ATTPredictor(nn.Module):
             #     for char in rec:
             #         word.append(CTLABELS.index(char))
             #     while len(word) < 25:
-            #         word.append(105)
+            #         word.append(228)
             #     word = word[:25]
             #     decodes.append(word)
 
@@ -366,7 +366,7 @@ class ATTPredictor(nn.Module):
                     for char in can[0]:
                         word.append(CTLABELS.index(char))
                     while len(word) < 25:
-                        word.append(105)
+                        word.append(228)
                     word = word[:25]
                     candidates_encoded.append(word)
 
